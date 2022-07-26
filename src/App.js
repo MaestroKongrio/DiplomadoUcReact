@@ -60,14 +60,24 @@ function App() {
     } catch (error) {
       console.log(error);
     }
-    }
+    
+  }
+
+  const firmarMensaje= async ()=>{
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner();
+    const signature = await signer.signMessage("Acepto las condiciones del servicio");
+    console.log(signature)
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <button onClick={btnClickHandler}>Conectar a metamask</button>
         <button onClick={addNetwork}>Agregar Red</button>
-        <button onClick={addToken}>Agregar Token</button>      
+        <button onClick={addToken}>Agregar Token</button>    
+        <button onClick={firmarMensaje}>Firmar Mensaje</button>   
         </header>
     </div>
   );
