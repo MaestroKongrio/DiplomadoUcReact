@@ -19,14 +19,14 @@ function App() {
   const addNetwork= async()=>{
     window.ethereum.request({
       method: 'wallet_addEthereumChain',
-      params: [{chainId: '0x3536EF8',
-        chainName: "Asicom Sandbox",
+      params: [{chainId: '44787',
+        chainName: "Alfajores",
         nativeCurrency: {
-          name: "Asicoin",
-          symbol: "Asicoin",
+          name: "CeloGLD",
+          symbol: "CLG",
           decimals: 18
         },
-        rpcUrls: ['https://u0jkis62x6:4cF9Bwb8DDMIJAncY8VnEZePdHV9C90E82hkfvezlw4@u0ayejgdrv-u0h1ne3a0k-rpc.us0-aws.kaleido.io/']
+        rpcUrls: ['https://alfajores-forno.celo-testnet.org"']
   }]
   })
   }
