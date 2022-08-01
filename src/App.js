@@ -19,14 +19,14 @@ function App() {
   const addNetwork= async()=>{
     window.ethereum.request({
       method: 'wallet_addEthereumChain',
-      params: [{chainId: '44787',
-        chainName: "Alfajores",
+      params: [{chainId: '0x7B35722',
+        chainName: "Demo Diplomado",
         nativeCurrency: {
-          name: "CeloGLD",
-          symbol: "CLG",
+          name: "Ether",
+          symbol: "ETH",
           decimals: 18
         },
-        rpcUrls: ['https://alfajores-forno.celo-testnet.org"']
+        rpcUrls: ['https://u0zgy0337c:mkqfSWAHwArqS6_EbHidBoosK7uJYGgRhaqGXN9Q-Q0@u0addag0g5-u0s8erlthr-rpc.us0-aws.kaleido.io/']
   }]
   })
   }
